@@ -1,3 +1,8 @@
+UNDER CONSTRUCTION
+==================
+
+UNDER CONSTRUCTION
+
 WordNet in JSON Format
 ======================
 
