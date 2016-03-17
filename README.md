@@ -23,5 +23,5 @@ Go API
 ------
 
 If you are working with Go, I encourage you to skip this JSON file and work
-directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet)
+directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet).
 
