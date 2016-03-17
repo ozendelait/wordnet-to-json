@@ -22,7 +22,7 @@ func main() {
 	checkError(err)
 	
 	fmt.Println("Writing output...")
-	f, err := os.Open("wordnet.json.gz")
+	f, err := os.Create("wordnet.json.gz")
 	checkError(err)
 	z := gzip.NewWriter(f)
 	_, err = z.Write(j)

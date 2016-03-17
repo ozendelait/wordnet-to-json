@@ -11,10 +11,11 @@ Such fun!
 Download
 --------
 
-[here](https://dl.dropboxusercontent.com/u/20957649/wordnet/wordnet.json.gz).
+[Here](https://dl.dropboxusercontent.com/u/20957649/wordnet/wordnet.json.gz).
 
-Run
----
+Documentation
+-------------
 
-If you'd like to create you own json file, simply run the go file.
+This is a [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
+struct.
 
