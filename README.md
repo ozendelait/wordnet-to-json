@@ -14,7 +14,7 @@ File Structure
 This is a serialized [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
 struct.
 
-#### WordNet
+#### WordNet (root object)
 
 The main object in the file.
 
