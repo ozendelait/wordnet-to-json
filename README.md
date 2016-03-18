@@ -3,6 +3,11 @@ WordNet in JSON Format
 
 Such fun!
 
+This dataset is based on:
+Princeton University "About WordNet." WordNet. Princeton University. 2010. http://wordnet.princeton.edu
+
+Please cite them if you use this dataset.
+
 Download
 --------
 
