@@ -38,7 +38,8 @@ A set of synonymous words.
 
 Denotes a semantic relation between one synset/word to another.
 
-* **Symbol** (string) relation between the 2 words. Target is <symbol> to source.
+* **Symbol** (string) relation between the 2 words. Target is \<symbol\> to source. See their meanings
+  [here](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#pkg-constants).
 * **Synset** (string) target synset ID.
 * **Source** (int) index of word in source synset, -1 for entire synset.
 * **Target** (int) index of word in target synset, -1 for entire synset.
