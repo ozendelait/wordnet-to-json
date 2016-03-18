@@ -3,11 +3,6 @@ WordNet in JSON Format
 
 Such fun!
 
-This dataset is based on:
-Princeton University "About WordNet." WordNet. Princeton University. 2010. http://wordnet.princeton.edu
-
-Please cite them if you use this dataset.
-
 Download
 --------
 
@@ -69,3 +64,10 @@ Go API
 If you are working with Go, I encourage you to skip this JSON file and work
 directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet).
 
+Citation
+--------
+
+This dataset is based on: Princeton University "About WordNet." WordNet.
+Princeton University. 2010. http://wordnet.princeton.edu
+
+Please cite them if you use this dataset.
