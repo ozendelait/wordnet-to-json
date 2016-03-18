@@ -11,9 +11,6 @@ Download
 File Structure
 --------------
 
-This is a serialized [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
-struct.
-
 #### WordNet (root object)
 
 An entire WordNet database.
@@ -23,7 +20,7 @@ Fields:
 * **Synset** (map to [Synset](#synset)) from synset ID to synset object.
 * **Lemma** (map to string array) from pos.lemma to synset IDs that contain it.
 * **Exception** (map to string array) from exceptional word to its forms.
-* **Example** (map to string) from example ID sentence template.
+* **Example** (map to string) from example ID to sentence template.
 
 #### Synset
 
@@ -73,6 +70,9 @@ Go API
 
 If you are working with Go, I encourage you to skip this JSON file and work
 directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet).
+This JSON dump is simply a serialized
+[WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
+struct.
 
 Citation
 --------
