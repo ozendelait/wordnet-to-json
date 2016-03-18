@@ -1,8 +1,3 @@
-UNDER CONSTRUCTION
-==================
-
-UNDER CONSTRUCTION
-
 WordNet in JSON Format
 ======================
 
@@ -16,8 +11,51 @@ Download
 File Structure
 --------------
 
-This is a [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
+This is a serialized [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
 struct.
+
+#### WordNet
+
+The main object in the file.
+
+* **Synset** (map to [Synset](#synset)) from synset ID to synset object.
+* **Lemma** (map to string array) from pos.lemma to synset IDs that contain it.
+* **Exception** (map to string array) from exceptional word to its forms.
+* **Example** (map to string) from example ID sentence template.
+
+#### Synset
+
+A set of synonymous words.
+
+* **Pos** (string) part of speech - a, n, r, s, v.
+* **Word** (string array) words in this synset
+* **Pointer** ([Pointer](#pointer) array) pointers to other synsets.
+* **Frame** ([Frame](#frame) array) sentence frames for verbs.
+* **Gloss** (string) lexical definition.
+* **Example** ([Example](#example) array) usage examples for words in this synset. Verbs only.
+
+#### Pointer
+
+Denotes a semantic relation between one synset/word to another.
+
+* **Symbol** (string) relation between the 2 words. Target is <symbol> to source.
+* **Synset** (string) target synset ID.
+* **Source** (int) index of word in source synset, -1 for entire synset.
+* **Target** (int) index of word in target synset, -1 for entire synset.
+
+#### Frame
+
+Links a synset word to a generic phrase that illustrates how to use it. Applies to verbs only.
+
+* **WordNumber** (int) index of word in the containing synset, -1 for entire synset.
+* **FrameNumber** (int) frame number on the WordNet site.
+
+#### Example
+
+Links a synset word to an example sentence. Applies to verbs only.
+
+* **WordNumber** (int) index of word in the containing synset, -1 for entire synset.
+* **TemplateNumber** (int) tumber of template in the [WordNet](#wordnet).Example field.
 
 Go API
 ------
