@@ -18,6 +18,8 @@ struct.
 
 The main object in the file.
 
+Fields:
+
 * **Synset** (map to [Synset](#synset)) from synset ID to synset object.
 * **Lemma** (map to string array) from pos.lemma to synset IDs that contain it.
 * **Exception** (map to string array) from exceptional word to its forms.
@@ -26,6 +28,8 @@ The main object in the file.
 #### Synset
 
 A set of synonymous words.
+
+Fields:
 
 * **Pos** (string) part of speech - a, n, r, s, v.
 * **Word** (string array) words in this synset
@@ -38,6 +42,8 @@ A set of synonymous words.
 
 Denotes a semantic relation between one synset/word to another.
 
+Fields:
+
 * **Symbol** (string) relation between the 2 words. Target is \<symbol\> to source. See their meanings
   [here](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#pkg-constants).
 * **Synset** (string) target synset ID.
@@ -48,12 +54,16 @@ Denotes a semantic relation between one synset/word to another.
 
 Links a synset word to a generic phrase that illustrates how to use it. Applies to verbs only.
 
+Fields:
+
 * **WordNumber** (int) index of word in the containing synset, -1 for entire synset.
 * **FrameNumber** (int) frame number on the WordNet site.
 
 #### Example
 
 Links a synset word to an example sentence. Applies to verbs only.
+
+Fields:
 
 * **WordNumber** (int) index of word in the containing synset, -1 for entire synset.
 * **TemplateNumber** (int) tumber of template in the [WordNet](#wordnet).Example field.
