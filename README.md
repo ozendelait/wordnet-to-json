@@ -16,7 +16,7 @@ struct.
 
 #### WordNet (root object)
 
-The main object in the file.
+An entire WordNet database.
 
 Fields:
 
