@@ -19,6 +19,9 @@ Fields:
 
 * **Synset** (map to [Synset](#synset)) from synset ID to synset object.
 * **Lemma** (map to string array) from pos.lemma to synset IDs that contain it.
+* **LemmaRanked** (map to string array) like Lemma but synsets are ordered from the
+  most frequently used to the least. Only a subset of the synsets are ranked, so
+  LemmaRanked has less synsets.
 * **Exception** (map to string array) from exceptional word to its forms.
 * **Example** (map to string) from example ID to sentence template.
 
