@@ -6,7 +6,7 @@ Such fun!
 Download
 --------
 
-[Here](https://dl.dropboxusercontent.com/u/20957649/data/wordnet.json.gz).
+[Here](https://www.dropbox.com/s/etbc8agulvtyzxt/wordnet.json.gz?dl=0).
 
 File Structure
 --------------
