@@ -1,7 +1,17 @@
 WordNet in JSON Format
 ======================
 
-Such fun!
+The [WordNet](http://wordnet.princeton.edu) dataset is provided in a non-standard format that requires each user to write his/her own parsing routines. [JSON](https://en.wikipedia.org/wiki/JSON#Example) is a univeral data format, that is supported across various programming languages.
+
+**Using JSON, anyone can import and use WordNet dataset with ease.**
+
+Citation
+--------
+
+This dataset is based on: Princeton University "About WordNet." WordNet.
+Princeton University. 2010. http://wordnet.princeton.edu
+
+Please cite them if you use this dataset.
 
 Download
 --------
@@ -74,14 +84,12 @@ Go API
 
 If you are working with Go, I encourage you to skip this JSON file and work
 directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet).
-This JSON dump is simply a serialized
+This JSON dump is simply a marshaled
 [WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
 struct.
 
-Citation
---------
+Having Trouble?
+---------------
 
-This dataset is based on: Princeton University "About WordNet." WordNet.
-Princeton University. 2010. http://wordnet.princeton.edu
-
-Please cite them if you use this dataset.
+If you have any issues, questions, or comments - feel free to share them on the
+[issues](https://github.com/fluhus/wordnet-to-json/issues) section.
