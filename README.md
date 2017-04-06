@@ -41,8 +41,13 @@ A set of synonymous words.
 
 Fields:
 
-* **offset** (int) synset offset, also used as an identifier.
-* **pos** (string) part of speech - a, n, r, s, v.
+* **offset** (int) synset offset in the raw data file, also used as an identifier.
+* **pos** (string) part of speech:
+  * a: adjective
+  * n: noun
+  * r: adverb
+  * s: satellite
+  * v: verb
 * **word** (string array) words in this synset.
 * **pointer** ([Pointer](#pointer) array) pointers to other synsets.
 * **frame** ([Frame](#frame) array) sentence frames for verbs.
