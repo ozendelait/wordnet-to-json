@@ -1,7 +1,7 @@
 WordNet in JSON Format
 ======================
 
-The [WordNet](http://wordnet.princeton.edu) dataset is provided in a non-standard format that requires each user to write his/her own parsing routines. [JSON](https://en.wikipedia.org/wiki/JSON#Example) is a univeral data format, that is supported across various programming languages.
+The [WordNet](http://wordnet.princeton.edu) dataset is provided in a non-standard format that requires each user to write his/her own parsing routines. [JSON](https://en.wikipedia.org/wiki/JSON#Example) is a universal data format, that is supported across various programming languages.
 
 **Using JSON, anyone can import and use WordNet dataset with ease.**
 
