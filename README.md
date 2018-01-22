@@ -16,7 +16,7 @@ Please cite them if you use this dataset.
 Download
 --------
 
-[Here](https://www.dropbox.com/s/etbc8agulvtyzxt/wordnet.json.gz?dl=0).
+See [releases](https://github.com/fluhus/wordnet-to-json/releases).
 
 File Structure
 --------------
