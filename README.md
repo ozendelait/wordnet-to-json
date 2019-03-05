@@ -30,7 +30,7 @@ The original converter script has been written by Amit Lavon (Github user fluhus
 
 If you find the mapping files (mapping_wordnet.json or mapping_imagenet.json) useful, please cite this repo:
 
-    @misc{ZendelWordNetConv,
+    @misc{ZendelWordNetConv19,
       author = {Zendel, Oliver},
       title = {WordNet v3.0 vs. v3.1 mapping},
       year = {2019},
