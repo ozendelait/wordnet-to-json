@@ -4,19 +4,15 @@ WordNet v3.0 vs. v3.1 mapping
 Based on the converter from https://github.com/fluhus/wordnet-to-json; 
 Applied to wordnet v3.0 data to create json compatible with ImageNet synset ids.
 Created semi-automatic mapping v3.1 <-> v3.0 (only about 100 entries of 1286600 could not be matched)
-Statistics:
 
-# mapping synset v3.1 -> synset v3.0:
-  worked: 117278
-  weakly linked: 305
-  missing mapping: 208
-  synset with same offsets in both: 58
+# Statistics from mapping synset v3.1 <-> v3.0:  
+| # synset      | v3.1->v3.0    | v3.0->v3.1   |
+| ------------- |:-------------:| -----:|
+| worked      | 117278 | 117264 |
+| weakly linked     | 305      |   302 |
+| missing | 208      |    93 |
+| same offset | 58      |    58 |
 
-# mapping synset v3.0 -> synset v3.1:
-  worked: 117264
-  weakly linked: 302
-  missing mapping: 93
-  synset with same offsets in both: 58
 
 Note: the official Wordnet search-engine allows switching to v3.0 (see answer from Finn Årup Nielsen:
 https://stackoverflow.com/questions/45826417/imagenet-index-to-wordnet-3-0-synsets
@@ -34,15 +30,15 @@ The original converter script has been written by Amit Lavon (Github user fluhus
 
 If you find the mapping files (mapping_wordnet.json or mapping_imagenet.json) useful, please cite this repo:
 
-  @misc{Charles2013,
-    author = {Zendel, Oliver},
-    title = {WordNet v3.0 vs. v3.1 mapping},
-    year = {2019},
-    publisher = {GitHub},
-    journal = {GitHub repository},
-    howpublished = {\url{https://github.com/ozendelait/wordnet-to-json}},
-    commit = {7521b70937355e826ea7e028a615108cdb18d0ee}
-  }
+    @misc{ZendelWordNetConv,
+      author = {Zendel, Oliver},
+      title = {WordNet v3.0 vs. v3.1 mapping},
+      year = {2019},
+      publisher = {GitHub},
+      journal = {GitHub repository},
+      howpublished = {\url{https://github.com/ozendelait/wordnet-to-json}},
+      commit = {7521b70937355e826ea7e028a615108cdb18d0ee}
+    }
 
 Download
 --------
