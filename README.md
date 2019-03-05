@@ -1,100 +1,54 @@
-WordNet in JSON Format
+WordNet v3.0 vs. v3.1 mapping
 ======================
 
-The [WordNet](http://wordnet.princeton.edu) dataset is provided in a format that requires dedicated parsing routines. [JSON](https://en.wikipedia.org/wiki/JSON#Example) is a universal data format, that is supported across various programming languages.
+Based on the converter from https://github.com/fluhus/wordnet-to-json; 
+Applied to wordnet v3.0 data to create json compatible with ImageNet synset ids.
+Created semi-automatic mapping v3.1 <-> v3.0 (only about 100 entries of 1286600 could not be matched)
+Statistics:
 
-**Using JSON, anyone can import and use WordNet dataset with ease.**
+mapping synset v3.1 -> synset v3.0:
+worked: 117278
+weakly linked: 305
+missing mapping: 208
+synset with same offsets in both: 58
+
+mapping synset v3.0 -> synset v3.1:
+worked: 117264
+weakly linked: 302
+missing mapping: 93
+synset with same offsets in both: 58
+
+Note: the official Wordnet search-engine allows switching to v3.0 (see answer from Finn Årup Nielsen:
+https://stackoverflow.com/questions/45826417/imagenet-index-to-wordnet-3-0-synsets
+; e.g. http://wordnet-rdf.princeton.edu/pwn30/01440764-n ).
+There is currently no reason to use v3.1 if you work with ImageNet. Just stick to v3.0.
 
 Citation
 --------
 
 This dataset is based on: Princeton University "About WordNet." WordNet.
 Princeton University. 2010. http://wordnet.princeton.edu
-
 Please cite them if you use this dataset.
+
+If you find the mapping files (mapping_wordnet.json or mapping_imagenet.json) useful, please cite this repo:
+
+@misc{Charles2013,
+  author = {Zendel, Oliver},
+  title = {WordNet v3.0 vs. v3.1 mapping},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ozendelait/wordnet-to-json}},
+  commit = {TODO}
+}
 
 Download
 --------
 
-See [releases](https://github.com/fluhus/wordnet-to-json/releases).
+Mapping files:
+mapping_wordnet.json: See [releases](https://github.com/ozendelait/wordnet-to-json/releases/download/wordnet-v3.0/wordnet.json.gz).
+mapping_imagenet.json: See [releases](https://github.com/ozendelait/wordnet-to-json/releases/download/wordnet-v3.0/wordnet.json.gz).
 
-File Structure
---------------
-
-#### WordNet (root object)
-
-An entire WordNet database.
-
-Fields:
-
-* **synset** (map to [Synset](#synset)) from synset ID to synset object.
-* **lemma** (map to string array) from pos.lemma to synset IDs that contain it.
-* **lemmaRanked** (map to string array) like Lemma but synsets are ordered from the
-  most frequently used to the least. Only a subset of the synsets are ranked, so
-  LemmaRanked has less synsets.
-* **exception** (map to string array) from exceptional word to its forms.
-* **example** (map to string) from example ID to sentence template.
-
-#### Synset
-
-A set of synonymous words.
-
-Fields:
-
-* **offset** (int) synset offset in the raw data file, also used as an identifier.
-* **pos** (string) part of speech:
-  * a: adjective
-  * n: noun
-  * r: adverb
-  * s: satellite
-  * v: verb
-* **word** (string array) words in this synset.
-* **pointer** ([Pointer](#pointer) array) pointers to other synsets.
-* **frame** ([Frame](#frame) array) sentence frames for verbs.
-* **gloss** (string) lexical definition.
-* **example** ([Example](#example) array) usage examples for words in this synset. Verbs only.
-
-#### Pointer
-
-Denotes a semantic relation between one synset/word to another.
-
-Fields:
-
-* **symbol** (string) relation between the 2 words. Target is \<symbol\> to source. See their meanings
-  [here](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#pkg-constants).
-* **synset** (string) target synset ID.
-* **source** (int) index of word in source synset, -1 for entire synset.
-* **target** (int) index of word in target synset, -1 for entire synset.
-
-#### Frame
-
-Links a synset word to a generic phrase that illustrates how to use it. Applies to verbs only.
-
-Fields:
-
-* **wordNumber** (int) index of word in the containing synset, -1 for entire synset.
-* **frameNumber** (int) frame number on the WordNet site.
-
-#### Example
-
-Links a synset word to an example sentence. Applies to verbs only.
-
-Fields:
-
-* **wordNumber** (int) index of word in the containing synset, -1 for entire synset.
-* **templateNumber** (int) tumber of template in the [WordNet](#wordnet).Example field.
-
-Go API
-------
-
-If you are working with Go, I encourage you to skip this JSON file and work
-directly with the [Go API](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet).
-This JSON dump is simply a marshaled
-[WordNet](https://godoc.org/github.com/fluhus/gostuff/nlp/wordnet#WordNet)
-struct.
-
-Having Trouble?
----------------
-
-If you have any issues, questions, or comments - feel free to share them on the
-[issues](https://github.com/fluhus/wordnet-to-json/issues) section.
+WordNet v3.0: See [releases](https://github.com/ozendelait/wordnet-to-json/releases/download/wordnet-v3.0/wordnet.json.gz).
+WordNet v3.1: See (https://github.com/fluhus/wordnet-to-json/releases).
+ImageNet subset (original, no v3.1 info): See https://gist.github.com/yrevar/667fd94b94f1666137f45d1363f60910
