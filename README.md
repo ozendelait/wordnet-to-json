@@ -19,6 +19,10 @@ https://stackoverflow.com/questions/45826417/imagenet-index-to-wordnet-3-0-synse
 ; e.g. http://wordnet-rdf.princeton.edu/pwn30/01440764-n ).
 There is currently no reason to use v3.1 if you work with ImageNet. Just stick to v3.0.
 
+Disclaimer
+----------
+This mapping is generated automatically. I have tried to fix many-to-one / one-to-many ambiguities whenever I encountered them. However, this is still provided "as-is" without any guarantee of correctness or completeness. 
+
 Citation
 --------
 
