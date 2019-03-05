@@ -44,9 +44,13 @@ Download
 --------
 
 Mapping files:
+
 mapping_wordnet.json: https://raw.githubusercontent.com/ozendelait/wordnet-to-json/master/mapping_wordnet.json
+
 mapping_imagenet.json: https://raw.githubusercontent.com/ozendelait/wordnet-to-json/master/mapping_imagenet.json
 
 WordNet v3.0: See [releases](https://github.com/ozendelait/wordnet-to-json/releases/download/wordnet-v3.0/wordnet.json.gz).
+
 WordNet v3.1: See (https://github.com/fluhus/wordnet-to-json/releases).
+
 ImageNet subset (original, no v3.1 info): See https://gist.github.com/yrevar/667fd94b94f1666137f45d1363f60910
