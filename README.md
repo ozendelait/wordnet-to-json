@@ -21,7 +21,7 @@ There is currently no reason to use v3.1 if you work with ImageNet. Just stick t
 
 Disclaimer
 ----------
-This mapping is generated automatically. I have tried to fix many-to-one / one-to-many ambiguities whenever I encountered them. However, this is still provided "as-is" without any guarantee of correctness or completeness. 
+This mapping is generated automatically. I have tried to fix many-to-one / one-to-many ambiguities whenever I encountered them. However, this is still provided "as-is" without any guarantee of correctness or completeness. Use it at your own risk!
 
 Citation
 --------
